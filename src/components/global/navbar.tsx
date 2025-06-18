@@ -136,7 +136,7 @@ export function NavbarDemo({ children }: { children?: React.ReactNode }) {
               <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
                 Login
               </NavbarButton>
-              <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="secondary" className="w-full">
+              <NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
                 Book a call
               </NavbarButton>
             </div>
