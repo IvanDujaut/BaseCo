@@ -10,14 +10,14 @@ import { NavbarDemo } from "@/components/global/navbar";
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center flex-col bg-neutral-950 gap-10">
+    <main className="flex items-center justify-center flex-col bg-neutral-950">
       <NavbarDemo>
         <section
           className="h-full w-full 
       rounded-md !overflow-visible 
       relative flex flex-col items-center antialiased"
         >
-          <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
+          <div className="flex flex-col pt-20 md:pt-32">
             <ContainerScroll
               titleComponent={
                 <div className="flex items-center flex-col gap-8">
@@ -37,7 +37,7 @@ export default function Home() {
                     <AnimatedGradientText className="text-lg font-medium">Introducing BaseCo</AnimatedGradientText>
                     <ChevronRight className="ml-1 size-4 stroke-neutral-500 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </div>
-                  <h1 className="text-4xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
+                  <h1 className="text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold">
                     Stop Begging Banks, Start Tokenization
                   </h1>
                 </div>
@@ -54,7 +54,7 @@ export default function Home() {
             </ContainerScroll>
           </div>
         </section>
-        <section className="md:mt-[8rem] mt-[-100px] relative">
+        <section className="pt-20 md:pt-32 relative">
           <div className="flex flex-col items-center justify-center">
             <h3 className="text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-sans font-bold z-10">
               Trusted by major industries

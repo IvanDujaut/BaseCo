@@ -54,7 +54,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
+    if (latest > 30) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -64,14 +64,20 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn(
-        "fixed inset-x-0 top-0 z-40 w-full transition-all duration-300",
+        "fixed inset-x-0 top-0 z-40 w-full",
         "container mx-auto px-4 sm:px-6 lg:px-8",
         "py-2 sm:py-3 md:py-4",
-        visible ? "sticky top-0" : "",
         className
       )}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        transform: "translateZ(0)",
+        willChange: "transform",
+      }}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -95,11 +101,15 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       transition={{
         type: "spring",
-        stiffness: 200,
-        damping: 50,
+        stiffness: 100,
+        damping: 30,
+        mass: 1.2,
+        duration: 0.5,
       }}
       style={{
         minWidth: "800px",
+        transform: "translateZ(0)",
+        willChange: "transform, width",
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
