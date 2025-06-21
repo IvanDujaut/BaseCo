@@ -67,7 +67,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       className={cn(
         "fixed inset-x-0 top-0 z-40 w-full",
         "container mx-auto px-4 sm:px-6 lg:px-8",
-        "py-2 sm:py-3 md:py-4",
+        "py-2",
         className
       )}
       style={{
