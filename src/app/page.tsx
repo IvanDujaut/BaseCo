@@ -19,21 +19,21 @@ const features = [
     description:
       "We guide you through tax, financial, and compliance needs, and we handle the entire legal setup and regulatory approval so your project is solid, secure, and ready to go.",
     href: "#",
-    className: "md:col-span-1 xl:col-span-1",
+    className: "md:col-span-1 xl:col-span-1 hover:bg-red-500/10",
   },
   {
     name: "Access to a Real Investor Network",
     description:
       "Your tokenized project is distributed through broker networks, institutional investors, and private communities — no need to build your own network.",
     href: "#",
-    className: "md:col-span-1 xl:col-span-1",
+    className: "md:col-span-1 xl:col-span-1 hover:bg-blue-500/10",
   },
   {
     name: "Market Launch & Liquidity",
     description:
       "We manage your go-to-market strategy, pricing, and secondary listing so your asset gains visibility, traction, and adoption from day one.",
     href: "#",
-    className: "md:col-span-1 md:row-span-2 xl:col-span-1 xl:row-span-2",
+    className: "md:col-span-1 md:row-span-2 xl:col-span-1 xl:row-span-2 hover:bg-orange-500/10",
     background: (
       <>
         <FlickeringGrid
@@ -62,7 +62,7 @@ const features = [
     name: "White-Label Investment Platform",
     description:
       "Launch under your brand with a ready-to-use platform: onboarding (KYC/AML), wallet creation, token issuance, investor dashboard, and secondary market access — all included.",
-    className: "md:col-span-2 xl:col-span-2",
+    className: "md:col-span-2 xl:col-span-2 hover:bg-green-500/10",
     href: "#",
     background: (
       <div>
@@ -209,8 +209,7 @@ export default function Home() {
               Traditional financing is slow, exclusive, and bureaucratic. While your assets sit idle, opportunities pass
               you by. We give you a smarter, faster way to unlock capital — built around your business, not the banks.
             </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-6xl mx-auto w-full"></div>
-            <BentoGrid className="max-w-sm md:max-w-3xl xl:max-w-6xl mx-auto w-full mt-16">
+            <BentoGrid className="max-w-sm md:max-w-3xl xl:max-w-6xl mx-auto w-full">
               {features.map((feature, idx) => (
                 <BentoCard key={idx} {...feature} />
               ))}
