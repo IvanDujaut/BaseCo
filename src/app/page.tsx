@@ -12,6 +12,8 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { Ripple } from "@/components/ui/ripple";
 import { Safari } from "@/components/ui/safari";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { FileText, Shield, Rocket, Target, TrendingUp } from "lucide-react";
 
 const features = [
   {
@@ -81,6 +83,88 @@ const features = [
   },
 ];
 
+const content = [
+  {
+    icon: <FileText className="!w-6 !h-6" />,
+    title: "1. Share your project",
+    description:
+      "Tell us about your asset, your goals, and your target audience. We assess its viability and define the best tokenization approach for your business.",
+    image: (
+      <div className="flex h-full w-full items-center justify-center bg-transparent">
+        <Image
+          src="/dashboard.png"
+          width={400}
+          height={300}
+          className="h-full w-full object-cover rounded-xl"
+          alt="Project dashboard"
+        />
+      </div>
+    ),
+  },
+  {
+    icon: <Shield className="!w-6 !h-6" />,
+    title: "2. Legal & technical setup",
+    description:
+      "We structure your project legally and operationally — drafting contracts, creating the token model, and ensuring full regulatory alignment.",
+    image: (
+      <div className="flex h-full w-full items-center justify-center bg-transparent">
+        <div className="text-center p-6">
+          <Shield className="w-16 h-16 mx-auto mb-4 text-blue-600" />
+          <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">Legal & Technical</h3>
+          <p className="text-sm text-blue-700 dark:text-blue-300">Contracts • Compliance • Architecture</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    icon: <Rocket className="!w-6 !h-6" />,
+    title: "3. Launch your branded platform",
+    description:
+      "We deploy your own investment platform with your brand identity, including investor onboarding, wallets, smart contracts, and token management.",
+    image: (
+      <div className="flex h-full w-full items-center justify-center bg-transparent">
+        <Image
+          src="/dashboard.png"
+          width={400}
+          height={300}
+          className="h-full w-full object-cover rounded-xl"
+          alt="Branded platform"
+        />
+      </div>
+    ),
+  },
+  {
+    icon: <Target className="!w-6 !h-6" />,
+    title: "4. Prepare for launch",
+    description:
+      "We develop a compelling whitepaper and support your marketing and investor outreach strategy to ensure visibility and trust from day one.",
+    image: (
+      <div className="flex h-full w-full items-center justify-center bg-transparent">
+        <div className="text-center p-6">
+          <Target className="w-16 h-16 mx-auto mb-4 text-orange-600" />
+          <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100">Launch Strategy</h3>
+          <p className="text-sm text-orange-700 dark:text-orange-300">Marketing • Outreach • Whitepaper</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    icon: <TrendingUp className="!w-6 !h-6" />,
+    title: "5. Go live & raise capital",
+    description:
+      "Your project goes live on your platform, fully integrated into our investor network, with support for liquidity, secondary markets, and scalability.",
+    image: (
+      <div className="flex h-full w-full items-center justify-center bg-transparent">
+        <div className="text-center p-6">
+          <TrendingUp className="w-16 h-16 mx-auto mb-4 text-green-600" />
+          <h3 className="text-lg font-semibold text-green-900 dark:text-green-100">Capital Raised</h3>
+          <p className="text-sm text-green-700 dark:text-green-300">Live Platform • Investors • Growth</p>
+        </div>
+      </div>
+    ),
+  },
+];
+
 export default function Home() {
   return (
     <BackgroundGradientAnimation
@@ -131,9 +215,6 @@ export default function Home() {
           </section>
           <section className="pt-20 md:py-16 relative">
             <div className="flex flex-col items-center justify-center">
-              {/* <AnimatedGradientText className="text-lg md:text-lg bg-clip-text text-transparent font-bold z-10">
-                Trusted by major industries
-              </AnimatedGradientText> */}
               <h3 className="text-base md:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-bold z-10">
                 Trusted by major industries
               </h3>
@@ -214,6 +295,19 @@ export default function Home() {
                 <BentoCard key={idx} {...feature} />
               ))}
             </BentoGrid>
+          </section>
+          <section className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
+            <AnimatedGradientText className="text-lg font-medium">How it works</AnimatedGradientText>
+            <h2 className="text-center text-balance text-base md:text-2xl lg:text-3xl font-semibold tracking-[-0.015em] bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 z-10">
+              Tokenize your asset and unlock capital in 5 simple steps
+            </h2>
+            <h3 className="text-center text-balance text-base md:text-lg text-neutral-400 max-w-4xl">
+              No friction. No technical barriers. We handle everything so your project reaches real investors in just
+              weeks.
+            </h3>
+            {/* <div className="w-full py-4"> */}
+            <StickyScroll content={content} />
+            {/* </div> */}
           </section>
           <section className="w-full h-full">
             <HeroParallax products={products} />
