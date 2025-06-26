@@ -1,9 +1,9 @@
 import { AnimatedGradientText } from "@/components";
-import { AnimatedShinyTextButton } from "@/components/animations/animated-shiny-text";
+// import { AnimatedShinyTextButton } from "@/components/animations/animated-shiny-text";
 import { BackgroundGradientAnimation } from "@/components/backgrounds/background-gradient-animation";
-import { clients, products } from "@/lib/constant";
-import { ContainerScroll } from "@/components/animations/container-scroll-animation";
-import { HeroParallax } from "@/components/ui/connect-parallax";
+import { clients } from "@/lib/constant";
+// import { ContainerScroll } from "@/components/animations/container-scroll-animation";
+// import { HeroParallax } from "@/components/ui/connect-parallax";
 import { InfiniteMovingCards } from "@/components/animations/infinite-moving-cards";
 import { NavbarDemo } from "@/components/navigation/navbar";
 import { WobbleCard } from "@/components/ui/wobble-card";
@@ -14,6 +14,7 @@ import { Safari } from "@/components/ui/safari";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { FileText, Shield, Rocket, Target, TrendingUp } from "lucide-react";
+import { HeroSectionOne } from "@/components/hero.section";
 
 const features = [
   {
@@ -184,34 +185,8 @@ export default function Home() {
     >
       <main className="flex items-center justify-center flex-col relative z-10">
         <NavbarDemo>
-          <section
-            className="h-full w-full 
-        rounded-md !overflow-visible 
-        relative flex flex-col items-center antialiased"
-          >
-            <div className="flex flex-col pt-20">
-              <ContainerScroll
-                titleComponent={
-                  <div className="flex items-center flex-col gap-8">
-                    <AnimatedShinyTextButton className="text-lg font-medium">
-                      ✨ Introducing BaseCo
-                    </AnimatedShinyTextButton>
-                    <h1 className="text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 font-bold">
-                      Stop Begging Banks, <br /> Start Tokenization
-                    </h1>
-                  </div>
-                }
-              >
-                <Image
-                  src={`/banner.png`}
-                  alt="hero"
-                  height={720}
-                  width={1400}
-                  className="mx-auto rounded-2xl object-cover h-full object-left-top"
-                  draggable={false}
-                />
-              </ContainerScroll>
-            </div>
+          <section id="home">
+            <HeroSectionOne />
           </section>
           <section className="pt-20 md:py-16 relative">
             <div className="flex flex-col items-center justify-center">
@@ -221,7 +196,7 @@ export default function Home() {
               <InfiniteMovingCards items={clients} direction="left" speed="normal" />
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
+          <section id="problem" className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
             <AnimatedGradientText className="text-lg font-medium">Problem</AnimatedGradientText>
             <h2 className="text-center text-balance text-base md:text-2xl lg:text-3xl font-semibold tracking-[-0.015em] bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 z-10">
               Your assets are valuable — but they&apos;re not working for you.
@@ -281,7 +256,7 @@ export default function Home() {
               </WobbleCard>
             </div>
           </section>
-          <section className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
+          <section id="solutions" className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
             <AnimatedGradientText className="text-lg font-medium">Solution</AnimatedGradientText>
             <h2 className="text-center text-balance text-base md:text-2xl lg:text-3xl font-semibold tracking-[-0.015em] bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 z-10">
               Stop losing time, money, and control to a system that wasn&apos;t built for you.
@@ -296,7 +271,7 @@ export default function Home() {
               ))}
             </BentoGrid>
           </section>
-          <section className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
+          <section id="how-it-works" className="flex flex-col items-center justify-center pt-20 md:py-16 gap-8">
             <AnimatedGradientText className="text-lg font-medium">How it works</AnimatedGradientText>
             <h2 className="text-center text-balance text-base md:text-2xl lg:text-3xl font-semibold tracking-[-0.015em] bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-600 z-10">
               Tokenize your asset and unlock capital in 5 simple steps
@@ -305,16 +280,11 @@ export default function Home() {
               No friction. No technical barriers. We handle everything so your project reaches real investors in just
               weeks.
             </h3>
-            {/* <div className="w-full py-4"> */}
             <StickyScroll content={content} />
-            {/* </div> */}
           </section>
-          <section className="w-full h-full">
-            <HeroParallax products={products} />
+          <section id="contact" className="pt-20 md:py-16 relative">
+            {/* ...contenido de Contact... */}
           </section>
-          {/* <section className="w-full h-screen">
-          <AnimatedBeamMultipleOutput className="border-none transition-all duration-300 ease-out" />
-        </section> */}
         </NavbarDemo>
       </main>
     </BackgroundGradientAnimation>

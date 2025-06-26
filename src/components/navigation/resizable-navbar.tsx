@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -64,12 +63,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   return (
     <motion.div
       ref={ref}
-      className={cn(
-        "fixed inset-x-0 top-0 z-40 w-full",
-        "container mx-auto px-4 sm:px-6 lg:px-8",
-        "py-2",
-        className
-      )}
+      className={cn("fixed inset-x-0 top-0 z-40 w-full", "container mx-auto px-4 sm:px-6 lg:px-8", "py-2", className)}
       style={{
         position: "fixed",
         top: 0,
@@ -219,10 +213,10 @@ export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick:
 
 export const NavbarLogo = () => {
   return (
-    <Link href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
+    <a href="#home" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
       <Image src="./volsmart.svg" alt="logo" width={30} height={30} />
       <span className="font-medium text-black dark:text-white">VolSmart</span>
-    </Link>
+    </a>
   );
 };
 

@@ -87,7 +87,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  
+
   /* Variables para Tailwind CSS v4 */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -107,7 +107,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  
+
   /* Variables de animación */
   --animate-first: moveVertical 30s ease infinite;
   --animate-second: moveInCircle 20s reverse infinite;
@@ -151,7 +151,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  
+
   /* Variables para Tailwind CSS v4 en modo oscuro */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -462,4 +462,8 @@
   h6 {
     font-family: var(--font-outfit);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

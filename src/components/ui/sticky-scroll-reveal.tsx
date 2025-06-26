@@ -75,7 +75,7 @@ export const StickyScroll = ({
           <div key={idx} className="flex flex-col items-center mb-0 lg:mb-4 mr-4 lg:mr-0 last:mb-0">
             <Button
               className={cn(
-                "w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all",
+                "w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all shadow-lg hover:cursor-pointer transform hover:-translate-y-0.5 active:scale-95 active:bg-gray-800",
                 idx === activeCard
                   ? "border-blue-500 bg-blue-100 text-blue-500 dark:bg-transparent"
                   : "border-neutral-300 bg-white dark:bg-transparent text-neutral-400"
