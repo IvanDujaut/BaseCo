@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { BorderBeam } from "./ui/border-beam";
+import { Button } from "../../../components/ui/button";
+import { BorderBeam } from "../../../components/ui/border-beam";
 
 export function HeroSectionOne() {
   return (

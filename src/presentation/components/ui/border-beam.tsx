@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/utils";
 import { motion, MotionStyle, Transition } from "motion/react";
 
 interface BorderBeamProps {
@@ -12,7 +12,7 @@ interface BorderBeamProps {
    * The duration of the border beam.
    */
   duration?: number;
-  /**
+  /** 
    * The delay of the border beam.
    */
   delay?: number;

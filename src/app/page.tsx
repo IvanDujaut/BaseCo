@@ -1,20 +1,20 @@
-import { AnimatedGradientText } from "@/components";
+import { AnimatedGradientText } from "@/presentation/pages/landing/components";
 // import { AnimatedShinyTextButton } from "@/components/animations/animated-shiny-text";
-import { BackgroundGradientAnimation } from "@/components/backgrounds/background-gradient-animation";
-import { clients } from "@/lib/constant";
+import { BackgroundGradientAnimation } from "@/presentation/pages/landing/components/backgrounds/background-gradient-animation";
+import { clients } from "@/shared/constants/clients";
 // import { ContainerScroll } from "@/components/animations/container-scroll-animation";
 // import { HeroParallax } from "@/components/ui/connect-parallax";
-import { InfiniteMovingCards } from "@/components/animations/infinite-moving-cards";
-import { NavbarDemo } from "@/components/navigation/navbar";
-import { WobbleCard } from "@/components/ui/wobble-card";
+import { InfiniteMovingCards } from "@/presentation/pages/landing/components/animations/infinite-moving-cards";
+import { NavbarDemo } from "@/presentation/pages/landing/components/navigation/navbar";
+import { WobbleCard } from "@/presentation/components/ui/wobble-card";
 import Image from "next/image";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import { Ripple } from "@/components/ui/ripple";
-import { Safari } from "@/components/ui/safari";
-import { FlickeringGrid } from "@/components/ui/flickering-grid";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { BentoCard, BentoGrid } from "@/presentation/components/ui/bento-grid";
+import { Ripple } from "@/presentation/components/ui/ripple";
+import { Safari } from "@/presentation/components/ui/safari";
+import { FlickeringGrid } from "@/presentation/components/ui/flickering-grid";
+import { StickyScroll } from "@/presentation/components/ui/sticky-scroll-reveal";
 import { FileText, Shield, Rocket, Target, TrendingUp } from "lucide-react";
-import { HeroSectionOne } from "@/components/hero.section";
+import { HeroSectionOne } from "@/presentation/pages/landing/components/hero.section";
 
 const features = [
   {

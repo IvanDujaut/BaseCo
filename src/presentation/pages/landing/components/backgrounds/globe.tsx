@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/utils";
 import { useEffect, useRef } from "react";
 import { useMotionValue, useSpring } from "motion/react";
 import createGlobe, { COBEOptions } from "cobe";

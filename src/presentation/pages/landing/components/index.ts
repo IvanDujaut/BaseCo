@@ -11,4 +11,4 @@ export * from './animations';
 export * from './backgrounds';
 
 // UI Components
-export * from './ui'; 
+export * from '../../../components/ui'; 
